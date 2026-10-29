@@ -1,20 +1,8 @@
-import type {
-  Metadata,
-  Viewport
-} from "next";
-import {
-  Navbar
-} from "@/components/layout/Navbar";
-import {
-  Footer
-} from "@/components/layout/Footer";
-import {
-  FloatingWhatsApp
-} from "@/components/layout/FloatingWhatsApp";
-import {
-  siteConfig
-} from "@/data/site";
-// @ts-expect-error Next.js handles global CSS imports at runtime.
+import type { Metadata, Viewport } from "next";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
+import { siteConfig } from "@/data/site";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -40,19 +28,13 @@ export const metadata: Metadata = {
     "Rumah 1 Lantai Cisauk",
     "Rumah 2 Lantai Tangerang",
   ],
-  authors: [{
-    name: siteConfig.brandName
-  }],
+  authors: [{ name: siteConfig.brandName }],
   creator: siteConfig.brandName,
-
-  // ---> TAMBAHKAN BAGIAN ICONS DI SINI <---
   icons: {
-    icon: "/images/icon.png", // Ganti dengan nama file logo Anda di folder public
-    shortcut: "/favicon.png",
-    sizes: "32x32",
-    apple: "/favicon.png",
+    icon: "/images/icon.png", // Sesuaikan dengan nama file logo/favicon Anda di dalam folder public/gambar
+    shortcut: "/gambar/favicon.png",
+    apple: "/gambar/favicon.png",
   },
-
   openGraph: {
     type: "website",
     locale: "id_ID",
@@ -65,24 +47,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly < {
+}: Readonly<{
   children: React.ReactNode;
-} > ) {
-  return ( <
-    html lang = "id" >
-    <
-    body className = "min-h-screen flex flex-col font-sans bg-ivory text-charcoal antialiased" >
-    <
-    Navbar / >
-    <
-    main className = "flex-1" > {
-      children
-    } < /main> <
-    Footer / >
-    <
-    FloatingWhatsApp / >
-    <
-    /body> < /
-    html >
+}>) {
+  return (
+    <html lang="id">
+      <body className="min-h-screen flex flex-col font-sans bg-ivory text-charcoal antialiased">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <FloatingWhatsApp />
+      </body>
+    </html>
   );
 }
