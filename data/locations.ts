@@ -39,7 +39,7 @@ export const strategicDestinations: StrategicDestination[] = [{
     duration: "10 Menit",
     transitMode: "Mobil / Motor",
     note: "Konektivitas cepat KRL Commuter Line rute Tanah Abang & terminal terpadu Intermoda BSD.",
-    image: "/images/facilities/Stasiun CIsauk.jpg",
+    image: "/images/facilities/Stasiuncisauk.jpg",
     mapQuery: "Stasiun Cisauk Tangerang",
   },
   {
@@ -48,7 +48,7 @@ export const strategicDestinations: StrategicDestination[] = [{
     name: "Gerbang Tol Serbaraja (Cisauk / Legok)",
     duration: "15 Menit",
     transitMode: "Mobil / Motor",
-    note: "Pintu tol Serpong–Balaraja yang menghubungkan langsung ke JORR 2 dan Bandara Soekarno-Hatta.",
+    note: "Pintu tol Serpong Balaraja yang menghubungkan langsung ke JORR 2 dan Bandara Soekarno-Hatta.",
     image: "/images/facilities/tol-serbaraja.jpg",
     mapUrl: "https://maps.app.goo.gl/5higSxyj6L7zKmNr7",
     mapQuery: "Gerbang Tol Serbaraja Cisauk",
